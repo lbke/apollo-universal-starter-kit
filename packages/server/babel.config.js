@@ -16,6 +16,7 @@ module.exports = api => {
       compact: false,
       presets: ['@babel/preset-react', ['@babel/preset-env', { targets: { node: true }, modules: false }]],
       plugins: [
+        '@loadable/babel-plugin',
         '@babel/plugin-transform-destructuring',
         '@babel/plugin-transform-runtime',
         ['@babel/plugin-proposal-decorators', { legacy: true }],

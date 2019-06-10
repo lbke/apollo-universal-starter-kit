@@ -1,4 +1,5 @@
 const url = require('url');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 
 const config = {
   builders: {
@@ -6,7 +7,10 @@ const config = {
       defines: {
         __SERVER__: true
       },
-      enabled: true
+      enabled: true,
+      webpackConfig: {
+        plugins: [new LoadablePlugin()]
+      }
     },
     test: {
       defines: {
